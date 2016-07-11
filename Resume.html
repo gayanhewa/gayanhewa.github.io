@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:doc="http://xsltsl.org/xsl/documentation/1.0" xmlns:dt="http://xsltsl.org/date-time" xmlns:str="http://xsltsl.org/string" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"5000203576","applicationID":"16428891","transactionName":"M10EMEJRX0dRUEBbCgoXJzdgH0NDShxWRwwIXEkCWV5QWB1BUUEQCV1IBUNASQ==","queueTime":0,"applicationTime":3418,"ttGuid":"29E919703BB6D809","agent":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQcBUV9SDBABUlVQDwkOVw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),s.on(m,function(){this.bstStart=Date.now()}),s.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(17)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;c<s;c++)a[c].apply(i,r);var u=f[w[n]];return u&&u.push([v,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",w[n]=e,e in f||(f[e]=[])})}var m={},w={},v={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return v}function i(){return new r}var a="nr@context",s=t("gos"),c=t(15),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!g++){var t=y.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(w,function(e,n){t[e]||(t[e]=n)});var n="https"===m.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(15),f=window,u=f.document,d="addEventListener",l="attachEvent",p=f.XMLHttpRequest,h=p&&p.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:p,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-963.min.js"},v=p&&h&&h[d]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:m,features:{},xhrWrappable:v};u[d]?(u[d]("DOMContentLoaded",i,!1),f[d]("load",r,!1)):(u[l]("onreadystatechange",o),f[l]("onload",r)),s("mark",["firstbyte",a()],null,"api");var g=0},{}]},{},["loader",2,10,4,3]);</script>
+    <title>Gayan Hewa</title>
+    <style type="text/css" id="static">
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+    body{line-height:1;background:#FFF;text-align:left}
+	body {line-height: 1; background: #FFF; text-align: left; font-feature-settings: "liga" 0; -moz-font-feature-settings: "liga" off;}
+    ol,ul{list-style:none}
+    blockquote,q{quotes:none}
+    blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+    :focus{outline:0}
+    ins{text-decoration:none}
+    del{text-decoration:line-through}
+    table{border-collapse:collapse;border-spacing:0}
+    a img{border:none}
+    ul,li{list-style-type:disc;margin:0 0 0 10px;padding:0}
+    ul li{margin:0 0 0 13px}
+    .clear{clear:both;height:0}
+    br.clear{line-height:0}
+    div.name{font-size:15px;font-weight:bold;line-height:17px;padding:0;text-transform:uppercase;border-top:6px solid #58585B;padding:18px 0 0 0}
+    div.logo{display:none}
+    div.paragraph{position:relative}
+    div.heading{clear:both;color:#231F20;text-transform:uppercase;font-style:italic;font-weight:bold}
+    div.address,div.address2{position:relative;font-size:0.917em;line-height:1.25em;color:#808284}
+    div.address{text-transform:uppercase}
+    .grayItl{font-style:italic;color:#C3C3C3}
+    span.companyname,span.degree,div.smry,span.skils{font-weight:bold}
+    span.companyname,span.degree{text-transform:uppercase}
+    span.email{color:#00ADEF;text-transform:lowercase}
+    .table_wrapper{width:100%;margin-top:0}
+    table.twocol td{width:50%}
+    table.twocol{width:100%}
+    span.paddedline{display:block}
+    .nodisplay{display:none}
+    div#document{color:#666;}<!--to remove background-color later at time of delivery-->
+    div#document p font{color:#666!important}
+    td.twocol_2{border-left:1px  solid #FFF}
+
+    /*FIX for FORCEFULLY making left margin ZERO for CL*/
+    div#document .sectionCL{border:none!important}
+    div#document .sectionCL .paragraph{margin-top:0!important}
+  </style>
+    <style type="text/css" id="unparsed">
+    div#document{line-height:{$FTLH}px;color:#404041}
+    div#document table{line-height:{$FTLH}px}
+    div#document.pagesize{width:{$DOCW}px;}
+    div#document.vmargins{padding-top:{$TBMR}px;padding-bottom:{$TBMR}px;}
+    div#document.hmargins{padding-left:{$LRMR}px;padding-right:{$LRMR}px;}
+    div#document .section{margin-top:{$SCSP}px;border-top:{$LNWT}px solid #B2B0BF}
+    div#document div.firstsection{margin-top:0;border:none;}
+    div#document div.SECTION_CNTC{margin-top:0;padding-bottom:{$CIMB}px;border:none}
+    div#document div.heading{margin-bottom:{$SHMB}px}
+    div#document div.paragraph{margin-top:{$PSPC}px}
+    div#document div.firstparagraph{margin-top:0}
+    div#document .singlecolumn,div#document .maincolumn{margin-left:{$PIND}px;width:{$MACW}px}
+    .fontsize{font-size:{$FTSZ}px}
+    .fontface{font-family:{$FTFC}}
+    div#document div.sectiontitle{font-size:{$HDSZ}px;line-height:{$HDLH}px}
+    div.name{font-size:{$NMSZ}px;line-height:{$NMLH}px}
+    div.address{font-size:{$CISZ}px;line-height:{$CILH}px}
+    div.smry{font-size:{$SMRY}px}
+    div#document table.skills td{padding-top:{$TDMT}px}
+
+    /*FIX for Re-calculating width of singlecolumn for CL*/
+    div#document .sectionCL .singlecolumn{margin-left:0!important;width:100%}
+    div.address2{font-size:{$FTSZ}px;line-height:{$FTLH}px}
+    div#document .sectionDateCL{padding-top:{$SCSP}px}
+  </style>
+    <style type="text/css" id="dynamic">
+    div#document{line-height:17px;color:#404041}
+    div#document table{line-height:17px}
+    div#document.pagesize{width:562px;}
+    div#document.vmargins{padding-top:39px;padding-bottom:39px;}
+    div#document.hmargins{padding-left:25px;padding-right:25px;}
+    div#document .section{margin-top:9px;border-top:1px solid #B2B0BF}
+    div#document div.firstsection{margin-top:0;border:none;}
+    div#document div.SECTION_CNTC{margin-top:0;padding-bottom:6px;border:none}
+    div#document div.heading{margin-bottom:3px}
+    div#document div.paragraph{margin-top:7px}
+    div#document div.firstparagraph{margin-top:0}
+    div#document .singlecolumn,div#document .maincolumn{margin-left:0px;width:562px}
+    .fontsize{font-size:11px}
+    .fontface{font-family:Tahoma}
+    div#document div.sectiontitle{font-size:12px;line-height:24px}
+    div.name{font-size:22px;line-height:34px}
+    div.address{font-size:10px;line-height:23px}
+    div.smry{font-size:12px}
+    div#document table.skills td{padding-top:3px}
+
+    /*FIX for Re-calculating width of singlecolumn for CL*/
+    div#document .sectionCL .singlecolumn{margin-left:0!important;width:100%}
+    div.address2{font-size:11px;line-height:17px}
+    div#document .sectionDateCL{padding-top:9px}
+  </style>
+  </head>
+  <body>
+    <div id="document" class="fontsize fontface vmargins hmargins linespacing pagesize">
+      <div id="SECTION_PICT805718580" class=" firstsection"></div>
+      <div id="SECTION_NAME805718579" class="section">
+        <div id="PARAGRAPH_805718579_1_523421775" class="paragraph PARAGRAPH_NAME firstparagraph">
+        <div class="name">
+          <span class="field" id="805718579FNAM1">Gayan</span> <span> </span> <span class="field" id="805718579LNAM1">Hewa</span>
+        </div>
+      </div>
+      </div>
+      <div id="SECTION_CNTC805718575" class="section SECTION_CNTC">
+        <div id="PARAGRAPH_805718575_1_523421776" class="paragraph PARAGRAPH_CNTC firstparagraph">
+        <div class="address">
+          <span class="paddedline">
+            <span class="field" id="805718575STRT1">#10-292, Block 622c Punggol Central</span><span>, </span><span class="spaced field" id="805718575CITY1">Punggol</span><span class="spaced field" id="805718575STAT1"></span><span class="spaced field" id="805718575ZIPC1">823622</span>
+          </span>
+          <span class="paddedline">
+            <span class="field" id="805718575HPHN1"></span>
+
+            <span>C: </span><span class="field" id="805718575CPHN1">+6592484823</span>
+            <span> | </span>
+            <span class="field email" id="805718575EMAI1">gayanhewa@gmail.com</span>
+          </span>
+        </div>
+      </div>
+      </div>
+      <div id="SECTION_SUMM805718581" class="section">
+        <div class="heading">
+        <div id="SECTNAME_SUMM805718581" class="sectiontitle">Professional Summary</div>
+      </div>
+        <div id="PARAGRAPH_805718581_1_523422578" class="paragraph smry firstparagraph">
+        <div class="field singlecolumn" id="805718581FRFM1">Results-oriented software engineering professional with more than <font>8</font> years of experience in the field. Promotes object-oriented approaches and keen on real-time software development. Analytical and detail-oriented.</div>
+      </div>
+      </div>
+      <div id="SECTION_HILT805718578" class="section">
+        <div class="heading">
+        <div id="SECTNAME_HILT805718578" class="sectiontitle">Skills</div>
+      </div>
+        <div id="PARAGRAPH_805718578_1_523422467" class="paragraph firstparagraph">
+        <div class="singlecolumn maincolumn">
+          <table class="twocol">
+            <tr>
+              <td class="field twocol_1" id="805718578SKC11"><ul><li>Advanced knowledge of PHP</li><li>Advanced problem solving skills</li><li>Performance and scalability optimization</li><li>API design knowledge</li></ul></td>
+              <td class="field twocol_2" id="805718578SKC21"><ul><li>E-commerce background</li><li>Troubleshooting and debugging</li><li>Innovative</li><li>Shell scripting</li><li>Amazon Web Services</li></ul></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      </div>
+      <div id="SECTION_EXPR805718577" class="section">
+        <div class="heading">
+        <div id="SECTNAME_EXPR805718577" class="sectiontitle">Work History</div>
+      </div>
+        <div id="PARAGRAPH_805718577_1_523422111" class="paragraph firstparagraph">
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="companyname" id="805718577COMP1">Riverview Mobility Solutions Pte Ltd</span>
+          </span>
+          <span class="paddedline grayItl">
+            <span class="jobtitle" id="805718577JTIT1">Senior Software Architect - (Head of Platform Architecture and Infrastructure)</span><span> | </span>
+            <span class="joblocation" id="805718577JCIT1">Singapore</span>
+            <span class="joblocation" id="805718577JSTA1"></span><span> | </span>
+            <span class="jobdates" format="%B %Y" id="805718577JSTD1">February 2016</span><span> - </span><span class="jobdates" format="%B %Y" id="805718577EDDT1">Current</span>
+          </span>
+          <span class="jobline" id="805718577JDES1"><ul><li>Lead the Platform Engineering team , ensure we build our architecture to facilitate scale and we are up to date with our infrastructure demands.  </li><li>Built tested and deployed scalable, highly available and modular software products.</li><li>Oversaw major new enhancements to existing software systems.Collaborated with product management to design, build and test systems.</li><li>Streamlined deployment process by developing continuous integration tools.</li><li>Strengthened developmental methodologies by introducing a code quality document.</li><li>Assessed costs and risks associated with developing new features and products.</li><li>Tools : Amazon Web Services , Ansible , ChatOps / Slack , PHP , NodeJS, Nginx , GIT, MySQL , CouchDB , MongoDB , MariaDB and Jira</li></ul><br><br><br></span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_805718577_2_523422275" class="paragraph">
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="companyname" id="805718577COMP2">Riverview Mobility Solutions Pte Ltd</span>
+          </span>
+          <span class="paddedline grayItl">
+            <span class="jobtitle" id="805718577JTIT2">Senior Software Engineer</span><span> | </span>
+            <span class="joblocation" id="805718577JCIT2">Singapore</span>
+            <span class="joblocation" id="805718577JSTA2"></span><span> | </span>
+            <span class="jobdates" format="%B %Y" id="805718577JSTD2">July 2014</span><span> - </span><span class="jobdates" format="%B %Y" id="805718577EDDT2">February 2016</span>
+          </span>
+          <span class="jobline" id="805718577JDES2"><ul><li>Created, delivered and maintained scalable system architecture to support a high-availability internet site with various internal applications.</li><li>Built databases and table structures following n-tier architecture methodology for web applications.</li><li>Led a group of <font>15</font> engineers in the design, and development of <font>PHP/NodeJs - </font>based software solutions.</li><li>Oversaw major new enhancements to existing software systems.</li><li>Evaluated multiple software solutions during early software architecture plotting and system planning stage.</li><li>Tools : Amazon Web Services, PHP , NodeJS , Redis , Git , MySQL, MariaDB , CouchDB , MongoDB and Jira</li></ul><br></span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_805718577_3_523426669" class="paragraph">
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="companyname" id="805718577COMP3">Gigmor.com </span>
+          </span>
+          <span class="paddedline grayItl">
+            <span class="jobtitle" id="805718577JTIT3">Software Engineer</span><span> | </span>
+            <span class="joblocation" id="805718577JCIT3">Santa Monica, CA</span><span>, </span>
+            <span class="joblocation" id="805718577JSTA3">United States</span><span> | </span>
+            <span class="jobdates" format="%B %Y" id="805718577JSTD3">February 2014</span><span> - </span><span class="jobdates" format="%B %Y" id="805718577EDDT3">July 2014</span>
+          </span>
+          <span class="jobline" id="805718577JDES3"><ul><li>Interfaced with business analysts, developers and technical support to determine the best requirement specifications.</li><li>Worked closely with other team members to plan, design and develop robust solutions in a timely manner.</li><li>This was a Remote Contract </li><li>Tools : Amazon Web Service , Digital Ocean , Redis, Git , PHP, Javascript, MySQL</li></ul><br><br></span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_805718577_4_523426894" class="paragraph">
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="companyname" id="805718577COMP4">Stein Study Abroad Ltd</span>
+          </span>
+          <span class="paddedline grayItl">
+            <span class="jobtitle" id="805718577JTIT4">Computer and Information Systems Manager</span><span> | </span>
+            <span class="joblocation" id="805718577JCIT4">Dublin</span><span>, </span>
+            <span class="joblocation" id="805718577JSTA4">Ireland</span><span> | </span>
+            <span class="jobdates" format="%B %Y" id="805718577JSTD4">September 2013</span><span> - </span><span class="jobdates" format="%B %Y" id="805718577EDDT4">April 2014</span>
+          </span>
+          <span class="jobline" id="805718577JDES4"><ul><li>Led the development team that created the web and mobile responsive user interfaces for all web apps. </li><li>Implemented designs, including experimentation and multiple iterations.</li><li>Prepared detailed reports concerning project specifications and activities.</li><li>Rapidly prototyped new capabilities to confirm feasibility.</li><li>Modified existing software to correct errors, upgrade interfaces and improve performance.</li><li>Directed software design and development while remaining focused on client needs.</li><li>Worked effectively with design teams to ensure software solutions elevated client side experience.</li><li>Managed and monitored all installed systems and infrastructure to ensure the highest level of availability.</li><li>Installed, configured, tested and maintained operating systems, application software and system management tools.</li></ul><br><br></span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_805718577_5_523427465" class="paragraph">
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="companyname" id="805718577COMP5">Collins Harper Software Inc</span>
+          </span>
+          <span class="paddedline grayItl">
+            <span class="jobtitle" id="805718577JTIT5">Senior PHP Developer</span><span> | </span>
+            <span class="joblocation" id="805718577JCIT5">Vancouver</span><span>, </span>
+            <span class="joblocation" id="805718577JSTA5">Canada</span><span> | </span>
+            <span class="jobdates" format="%B %Y" id="805718577JSTD5">April 2013</span><span> - </span><span class="jobdates" format="%B %Y" id="805718577EDDT5">September 2013</span>
+          </span>
+          <span class="jobline" id="805718577JDES5"><ul><li>Contributed to the core products of the company as a remote contracted developer. </li><li>Developed New Magento extensions and Maintained of existing extensions</li><li>Tools :  SVN, PHP , Javascript, MySQL</li></ul><br></span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_805718577_6_523427809" class="paragraph">
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="companyname" id="805718577COMP6">Sweet Tooth Inc</span>
+          </span>
+          <span class="paddedline grayItl">
+            <span class="jobtitle" id="805718577JTIT6">Software and Support Engineer</span><span> | </span>
+            <span class="joblocation" id="805718577JCIT6">Vancouver</span><span>, </span>
+            <span class="joblocation" id="805718577JSTA6">Canada</span><span> | </span>
+            <span class="jobdates" format="%B %Y" id="805718577JSTD6">September 2012</span><span> - </span><span class="jobdates" format="%B %Y" id="805718577EDDT6">April 2013</span>
+          </span>
+          <span class="jobline" id="805718577JDES6"><ul><li>Identified and solved technical issues for customers who wanted to make the most of the Sweet Tooth Rewards Platform.</li><li>Ensure appropriate issues are flagged from support inquiries and addressed during the development sprint.</li><li>Tools : SVN , PHP , Javascript</li></ul><br><br></span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_805718577_7_523431449" class="paragraph">
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="companyname" id="805718577COMP7">Netstarter Pty Ltd</span>
+          </span>
+          <span class="paddedline grayItl">
+            <span class="jobtitle" id="805718577JTIT7">Magento Developer</span><span> | </span>
+            <span class="joblocation" id="805718577JCIT7">Colombo</span><span>, </span>
+            <span class="joblocation" id="805718577JSTA7">Sri Lanka</span><span> | </span>
+            <span class="jobdates" format="%B %Y" id="805718577JSTD7">July 2012</span><span> - </span><span class="jobdates" format="%B %Y" id="805718577EDDT7">November 2013</span>
+          </span>
+          <span class="jobline" id="805718577JDES7"><ul><li>Working with Account Managers and the Technical teams to deliver world-class E-commerce Solutions.</li><li>Liaising with the Account Manager , PM and QA teams ensure releases are done timely for the customers acceptance testing.</li><li>Ensuring timely delivery of projects. </li><li>Tools : SVN , PHP , Javascript, MySQL, Apache , Nginx </li></ul><br></span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_805718577_8_523431081" class="paragraph">
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="companyname" id="805718577COMP8">Proporta.com Ltd</span>
+          </span>
+          <span class="paddedline grayItl">
+            <span class="jobtitle" id="805718577JTIT8">Software Engineer</span><span> | </span>
+            <span class="joblocation" id="805718577JCIT8">Colombo</span><span>, </span>
+            <span class="joblocation" id="805718577JSTA8">Sri Lanka</span><span> | </span>
+            <span class="jobdates" format="%B %Y" id="805718577JSTD8">May 2011</span><span> - </span><span class="jobdates" format="%B %Y" id="805718577EDDT8">March 2012</span>
+          </span>
+          <span class="jobline" id="805718577JDES8"><ul><li>Wrote maintainable and extensible code in a team environment.</li><li>New feature development and maintenance of the bespoke Online Shop</li><li>Extending features of OpenERP via Custom Modules to suit business needs</li><li>Liaising with the Business team in the United Kingdom to design and implement change requests</li><li>Tools : SVN , PHP , Python , Javascript , Apache, MySQL , Postgresql </li></ul><br></span>
+        </div>
+      </div>
+      </div>
+      <div id="SECTION_EDUC805718576" class="section">
+        <div class="heading">
+        <div id="SECTNAME_EDUC805718576" class="sectiontitle">Education</div>
+      </div>
+        <div id="PARAGRAPH_805718576_1_523422358" class="paragraph firstparagraph">
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="degree" id="805718576DGRE1">Bachelor of Information Technology</span><span> </span>
+            <span class="programline" id="805718576STUY1"></span>
+          </span>
+          <span class="paddedline"><span id="805718576SCHO1">University of Colombo School of Computing</span></span>
+          <span class="paddedline grayItl">
+            <span id="805718576SCIT1">Sri Lanka</span><span>, </span>
+            <span id="805718576SSTA1"></span><span> | </span><span id="805718576GRYR1">2011</span>
+          </span>
+
+          <span class="field" id="805718576FRFM1"></span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_805718576_2_523450071" class="paragraph">
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="degree" id="805718576DGRE2">Postgraduate Diploma in IT</span><span> </span>
+            <span class="programline" id="805718576STUY2"></span>
+          </span>
+          <span class="paddedline"><span id="805718576SCHO2">British Computer Society</span></span>
+          <span class="paddedline grayItl">
+            <span id="805718576SCIT2">United Kingdom</span><span>, </span>
+            <span id="805718576SSTA2"></span><span> | </span><span id="805718576GRYR2">2011</span>
+          </span>
+
+          <span class="field" id="805718576FRFM2"></span>
+        </div>
+      </div>
+      </div>
+      <div id="SECTION_CERT805720109" class="section">
+        <div class="heading">
+        <div id="SECTNAME_CERT805720109" class="sectiontitle">Certifications</div>
+      </div>
+        <div id="PARAGRAPH_805720109_1_523422652" class="paragraph firstparagraph">
+        <div class="field singlecolumn" id="805720109FRFM1"><ul><li>AWS Certified Solutions Architect – Associate</li><li>AWS Certified Developer - Associate</li><li>Magento Certified Developer Plus</li></ul></div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
