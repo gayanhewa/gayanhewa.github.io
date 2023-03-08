@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>QR Code Scanner</title>
+    <style>
+      #video {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>QR Code Scanner</h1>
+    <video id="video"></video>
+    <script src="https://rawgit.com/cozmo/jsQR/master/dist/jsQR.js"></script>
+    <script>
+      const video = document.getElementById('video');
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+
+      // Get user media
+      navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
+        video.srcObject = stream;
+        video.play();
+        requestAnimationFrame(tick);
+      });
+
+      function tick() {
+        if (video.readyState === video.HAVE_ENOUGH_DATA) {
+          canvas.width = video.videoWidth;
+          canvas.height = video.videoHeight;
+          context.drawImage(video, 0, 0, canvas.width, canvas.height);
+          const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+          const code = jsQR(imageData.data, imageData.width, imageData.height);
+          if (code) {
+            console.log(`QR code detected: ${code.data}`);
+            // Do something with the code, e.g. send it to a server
+          }
+        }
+        requestAnimationFrame(tick);
+      }
+    </script>
+  </body>
+</html>
